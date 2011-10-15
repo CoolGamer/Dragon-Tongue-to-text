@@ -1,0 +1,23 @@
+﻿Enter the Dragon text in the top textarea. In the bottom left textarea the Dragon characters will be
+converted to Latin characters. In the bottom right textarea the translation of the text will be
+displayed. Words that are bold couldn't be translated.
+
+The dictionary that is used to translate the Dragon language is stored in dict.js. You can edit or
+add new words to that file to update the dictionary.
+
+At the bottom there are buttons below the header "Snippets". After pressing one of these buttons the
+content of the top textarea is replaced with the selected snippet. The snippets are predefined
+snippets of Dragon text that were found earlier. You can edit or add the snippets in snippets.js.
+
+Compatible with Internet Explorer 9, Firefox 7.
+Under Internet Explorer 6/7/8 new characters will always be put at the end.
+Chrome doesn't render the "space"-character properly.
+
+==================
+== License:
+==================
+This work is licensed under the Creative Commons Attribution-ShareAlike 2.5 Generic License.
+The Dragon Alphabet Font (http://www.uesp.net/wiki/Lore:Dragon_Alphabet) and the translation for
+Dragon Language (http://www.uesp.net/wiki/Lore:Dragon_Language) were obtained from UESP.net.
+
+The source code of index.htm, translate.js and style.css are also released to the public domain.

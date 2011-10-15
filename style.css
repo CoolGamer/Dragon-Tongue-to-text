@@ -1,0 +1,98 @@
+﻿/**
+The content in this file is released to the public domain.
+This doesn't include the font referenced in this file.
+*/
+
+@font-face {
+	/*
+	*******************************************************************
+	Font taken from http://www.uesp.net/wiki/Lore:Dragon_Alphabet
+	The content is licensed under the Creative Commons by-sa license.
+	http://creativecommons.org/licenses/by-sa/2.5/
+	*/
+    font-family: 'DragonTESMedium';
+    src: url('dragontes-webfont.eot');
+    src: url('dragontes-webfont.eot?#iefix') format('embedded-opentype'),
+         url('dragontes-webfont.woff') format('woff'),
+         url('dragontes-webfont.ttf') format('truetype'),
+         url('dragontes-webfont.svg#DragonTESMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+	/*
+	*******************************************************************
+	*/
+}
+
+
+
+a, a:link, a:visited, a:active, a:hover
+{
+	text-decoration: underline;
+	
+	color: #CACFD3;
+}
+
+footer
+{
+	padding: 20px 0px 5px;
+	font-size: small;
+	font-style:italic;
+	text-align: center;
+}
+
+body
+{
+	background-color: #171A1F;
+	color: #CACFD3;
+	font-family: "Georgia";
+}
+
+h1
+{
+	margin: 5px 0px;
+}
+
+#content
+{
+	background-color: #333335;
+	width: 1000px;
+	position: relative;
+	left: 50%;
+	margin-left: -510px;
+	padding: 5px 10px;
+}
+
+.halfblock_r, .halfblock_l
+{
+	width: 490px;
+}
+
+.halfblock_r
+{
+	float: right;
+}
+
+.halfblock_l
+{
+	float: left;
+}
+
+.dragon, .normal
+{
+	font-size: xx-large;
+	
+}
+
+.dragon
+{
+	font-family: 'DragonTESMedium';
+	word-spacing: 30px;
+}
+
+textarea
+{
+	background-color: #50433D;
+	color: #9DA6AB;
+	padding-top: 5px;
+	width: 100%;
+}

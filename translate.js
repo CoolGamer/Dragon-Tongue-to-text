@@ -1,4 +1,4 @@
-/*
+﻿/*
 ***************************************************************
 ** The content of this file is released to the public domain **
 ***************************************************************
@@ -22,13 +22,23 @@ function addTextToTextarea(textarea, newtext)
 {
 	var dom = textarea[0];
 	var text = textarea.val();
-	var left = text.substr(0, dom.selectionEnd);
-	var right = text.substr(dom.selectionEnd);
-	var sel = dom.selectionEnd + newtext.length;
 	
-	textarea.val(left + newtext + right);
-	dom.setSelectionRange(sel, sel);
-	
+	if (dom.setSelectionRange)
+	{
+		//Inserts characters at the cursor
+		var left = text.substr(0, dom.selectionEnd);
+		var right = text.substr(dom.selectionEnd);
+		var sel = dom.selectionEnd + newtext.length;
+		
+		textarea.val(left + newtext + right);
+		
+		dom.setSelectionRange(sel, sel);
+	}
+	else
+	{
+		//Inserts character always at the end
+		textarea.val(text + newtext);
+	}
 
 	dom.focus();
 }

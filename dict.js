@@ -1,4 +1,4 @@
-/*
+﻿/*
 *******************************************************************
 Content in this file is taken from http://www.uesp.net/wiki/Lore:Dragon_Language
 The content is licensed under the Creative Commons by-sa license.
