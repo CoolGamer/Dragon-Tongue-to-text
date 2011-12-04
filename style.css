@@ -4,23 +4,15 @@ This doesn't include the font referenced in this file.
 */
 
 @font-face {
-	/*
-	*******************************************************************
-	Font taken from http://www.uesp.net/wiki/Lore:Dragon_Alphabet
-	The content is licensed under the Creative Commons by-sa license.
-	http://creativecommons.org/licenses/by-sa/2.5/
-	*/
-    font-family: 'DragonTESMedium';
-    src: url('dragontes-webfont.eot');
-    src: url('dragontes-webfont.eot?#iefix') format('embedded-opentype'),
-         url('dragontes-webfont.woff') format('woff'),
-         url('dragontes-webfont.ttf') format('truetype'),
-         url('dragontes-webfont.svg#DragonTESMedium') format('svg');
+    font-family: 'DragonscriptRegular';
+    src: url('dragon_script-webfont.eot');
+    src: url('dragon_script-webfont.eot?#iefix') format('embedded-opentype'),
+         url('dragon_script-webfont.woff') format('woff'),
+         url('dragon_script-webfont.ttf') format('truetype'),
+         url('dragon_script-webfont.svg#DragonscriptRegular') format('svg');
     font-weight: normal;
     font-style: normal;
-	/*
-	*******************************************************************
-	*/
+
 }
 
 
@@ -62,6 +54,13 @@ h1
 	padding: 5px 10px;
 }
 
+#buttons input[type="button"]
+{
+	width: 60px;
+	text-align: center;
+
+}
+
 .halfblock_r, .halfblock_l
 {
 	width: 490px;
@@ -85,7 +84,7 @@ h1
 
 .dragon
 {
-	font-family: 'DragonTESMedium';
+	font-family: 'DragonscriptRegular';
 	word-spacing: 30px;
 }
 

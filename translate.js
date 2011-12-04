@@ -14,9 +14,28 @@ function Char(normal, symbol)
 }
 
 //Taken from: http://www.gameinformer.com/b/news/archive/2011/01/06/translating-the-cover.aspx
-var symbols = [new Char("A"), new Char("aa", "a"), new Char("ah", "b"), new Char("B"), new Char("D"), new Char("E", "E"), new Char("ei", "e"), new Char("ey", "f"), new Char("F"), new Char("G"),
-	new Char("H"), new Char("I"), new Char("ii", "i"), new Char("J"), new Char("K"), new Char("L"), new Char("M"), new Char("N"), new Char("O"), new Char("P"), new Char("R"), new Char("S"), new Char("T"),
-	new Char("U"), new Char("V"), new Char("W"), new Char("Z")];
+var symbols = [];
+
+
+	symbols.push(new Char("?", "0"));
+	symbols.push(new Char("aa", "1"));
+	symbols.push(new Char("ei", "2"));
+	symbols.push(new Char("ii", "3"));
+	symbols.push(new Char("ah", "4"));
+	symbols.push(new Char("uu", "5"));
+	symbols.push(new Char("?", "6"));
+	symbols.push(new Char("ir", "7"));
+	symbols.push(new Char("oo", "8"));
+	symbols.push(new Char("ey", "9"));
+
+
+for (var i = 65; i<=90; i++) {
+	if (i == 67)
+		continue;
+	symbols.push(new Char(String.fromCharCode(i)));
+
+}
+
 
 function addTextToTextarea(textarea, newtext)
 {
@@ -45,9 +64,31 @@ function addTextToTextarea(textarea, newtext)
 
 function translateWord(word)
 {
-	var result = dict[word.toLowerCase()];
+	word = word.toLowerCase();
+	var result = dict[word];
 	if (result == undefined)
+	{
+		if (word.substr(0, 2) == "vo")
+		{
+			var result2 = translateWord(word.substr(2))
+			if (result2.replace("-", "") != word.toUpperCase())
+				return "(opposite of " + result2 + ")";
+		}
+		
+		for (var i = word.length - 2; i > 1; i--)
+		{
+			var p1 = word.substr(0, i);
+			var p2 = word.substr(i);
+			var result3 = translateWord(p1);
+			if (result3.replace("-", "") != p1.toUpperCase()) {
+				var result4 = result3 + "-" + translateWord(p2);
+				if (result4.match(/[A-Z]+-[A-Z]+/) === null)
+					return result4;
+			}
+		}
+	
 		return word.toUpperCase();
+	}
 
 	return result;
 }
@@ -104,7 +145,7 @@ $(function () {
 	
 	for (var i = 0; i < symbols.length; i++)
 	{
-		if (i != 0 &&(i % 14) == 0)
+		if (i != 0 &&(i % 12) == 0)
 			$("<br>").appendTo(buttonsdiv);
 		
 		
